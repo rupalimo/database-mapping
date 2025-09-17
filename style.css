@@ -1,0 +1,43 @@
+:root {
+	--body-font: 'Arial', sans-serif;
+	--secondary-font: 'Times New Roman', serif;
+	--text: #000000;
+	--active: #d0d0d6;
+	font-family: var(--body-font);
+	color: var(--text);
+	font-size: 16px;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	margin: 0.5rem;
+}
+
+span {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin-bottom: 1rem;
+}
+
+.label {
+	/* border-bottom: 1px solid var(--text); */
+	margin: 0 0 1rem 0;
+	padding: 0 0 0.5rem 0;
+	text-transform: uppercase;
+  display: block;
+
+}
+
+p {
+	margin: 0 1rem 0 0;
+}

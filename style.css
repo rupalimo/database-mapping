@@ -32,11 +32,12 @@ header a {
 }
 
 details {
-	margin-bottom: 0.125rem;
+	margin: 0.125rem 0;
 	cursor: pointer;
 	padding: 0 0.5rem;
 	border-radius: 1rem;
 	transition: linear 0.25s;
+	
 }
 
 details:hover {
@@ -58,10 +59,8 @@ details p:last-of-type {
 }
 
 details[open] {
-	/* color: var(--active); */
-	/* margin: 1rem 0; */
-	margin-bottom: 0.5rem;
-	transition: linear 0.25s;
+	/* margin: 0.5rem 0; */
+	padding: 0.5rem 0.5rem;
 	background-image: linear-gradient(
 		to bottom,
 		var(--active),
@@ -72,8 +71,6 @@ details[open] {
 }
 
 details div {
-	margin: 0 0.25rem;
-	border-bottom: 1px dotted var(--active);
 	padding: 0 1rem;
 	font-size: var(--font-small);
 }

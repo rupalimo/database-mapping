@@ -2,10 +2,13 @@
 	--body-font: 'Arial', sans-serif;
 	--secondary-font: 'Times New Roman', serif;
 	--text: #000000;
-	--active: #d0d0d6;
+	--active: #e0e0e0;
+	--grey: #e0e0e0;
+	--font-base: 20px;
+	--font-small: 16px;
 	font-family: var(--body-font);
 	color: var(--text);
-	font-size: 16px;
+	font-size: var(--font-base);
 }
 
 html {
@@ -19,25 +22,58 @@ body {
 	padding: 0;
 }
 
-section {
-	margin: 0.5rem;
+main,
+header {
+	margin: 1rem;
 }
 
-span {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+header a {
+	display: block;
+}
+
+details {
+	margin-bottom: 0.125rem;
+	cursor: pointer;
+	padding: 0 0.5rem;
+	border-radius: 1rem;
+	transition: linear 0.25s;
+}
+
+details:hover {
+	background: var(--grey);
+	background-image: linear-gradient(
+		to bottom,
+		var(--active),
+		white,
+		var(--active)
+	);
+}
+
+details p:first-of-type {
+	margin-top: 1rem;
+}
+
+details p:last-of-type {
 	margin-bottom: 1rem;
 }
 
-.label {
-	/* border-bottom: 1px solid var(--text); */
-	margin: 0 0 1rem 0;
-	padding: 0 0 0.5rem 0;
-	text-transform: uppercase;
-  display: block;
-
+details[open] {
+	/* color: var(--active); */
+	/* margin: 1rem 0; */
+	margin-bottom: 0.5rem;
+	transition: linear 0.25s;
+	background-image: linear-gradient(
+		to bottom,
+		var(--active),
+		white 25%,
+		white 75%,
+		var(--active)
+	);
 }
 
-p {
-	margin: 0 1rem 0 0;
+details div {
+	margin: 0 0.25rem;
+	border-bottom: 1px dotted var(--active);
+	padding: 0 1rem;
+	font-size: var(--font-small);
 }

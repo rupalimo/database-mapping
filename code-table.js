@@ -11,14 +11,15 @@ $(document).ready(function () {
 
 				if (index == 0) return;
 
-				let div = $(
-					`<span>
-						<p>` + entry.Article + `</p>
+				let main = $(
+					`<details>
+						<summary>` + entry.Article + `</summary>
+						<div>
 						<p>` + entry.URL + `</p>
 	<p>` + entry.Peopleinvolved + `</p>
-
+</div
 		
-					</span>`
+					</details>`
 				).appendTo('#table');
 			});
 		}

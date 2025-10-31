@@ -2,7 +2,7 @@
 	--body-font: 'Arial', sans-serif;
 	--secondary-font: 'Times New Roman', serif;
 	--text: #000000;
-	--active: #e0e0e0;
+	--active: #ff0000;
 	--grey: #e0e0e0;
 	--font-base: 20px;
 	--font-small: 16px;
@@ -24,53 +24,62 @@ body {
 
 main,
 header {
-	margin: 1rem;
+	padding: 1rem;
 }
 
 header a {
 	display: block;
+	font-size: 10px;
+	color: var(--grey);
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
-details {
-	margin: 0.125rem 0;
+header nav {
+	padding: 1rem 0;
+	width: inherit;
+	display: block;
+}
+
+header nav input {
+	width: -moz-available;
+	width: -webkit-fill-available;
+	width: fill-available;
+	border: 1px solid var(--text);
+	border-radius: 0px;
+	padding: 0.25rem 1rem;
+}
+
+header input[type='search'] {
+	font-size: var(--font-base);
+}
+
+header input[type='search']:focus, input:focus {
+	border-color: var(--active);
+	outline-style: none;
+	outline: none;
+	outline: 0;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+main a {
+	padding: 0.25rem 1rem;
+	margin: 0.25rem;
+	border: 1px solid var(--text);
+	box-shadow: 0 0 8px 1px var(--grey) inset;
 	cursor: pointer;
-	padding: 0 0.5rem;
-	border-radius: 1rem;
-	transition: linear 0.25s;
-	
 }
 
-details:hover {
-	background: var(--grey);
-	background-image: linear-gradient(
-		to bottom,
-		var(--active),
-		white,
-		var(--active)
-	);
+main a[data-confirm=''] {
+	display: none;
 }
 
-details p:first-of-type {
-	margin-top: 1rem;
-}
-
-details p:last-of-type {
-	margin-bottom: 1rem;
-}
-
-details[open] {
-	/* margin: 0.5rem 0; */
-	padding: 0.5rem 0.5rem;
-	background-image: linear-gradient(
-		to bottom,
-		var(--active),
-		white 25%,
-		white 75%,
-		var(--active)
-	);
-}
-
-details div {
-	padding: 0 1rem;
-	font-size: var(--font-small);
+main a:hover {
+	box-shadow: 0 0 8px 1px var(--active) inset;
+		border-color: var(--active);
 }
